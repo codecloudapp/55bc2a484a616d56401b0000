@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+            <h1 class="visible-xs">About Us</h1>
+            <a name="place_vertu"></a>
+            <h2>PLACE VERTU</h2>
+            <p>all about place vertu</p>
+            
+            <a name="leasing_information"></a>
+            <h2>LEASING INFORMATION</h2>
+            <p> all about place vertu</p>
+            
+            <a name="charities"></a>
+            <h2>CHARITIES & NON-PROFIT GROUPS</h2>
+            <p> all about place vertu</p>
+            
+            <a name="green_initiatives"></a>
+            <h2>GREEN INITIATIVES</h2>
+            <p> all about place vertu</p>
+            
+            <a name="contract_policy"></a>
+            <h2>BUILDING CONTRACT POLICY</h2>
+            <p> all about place vertu</p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+            <h1 class="hidden-xs">About Us</h1>
+            <img src="http://placehold.it/350x350" class="hidden-xs">
+            <ul class="button-panel">
+                <li><a href="#place_vertu" class="btn btn-default">PLACE VERTU</a></li>
+                <li><a href="#leasing_information" class="btn btn-default">LEASING INFORMATION</a></li>
+                <li><a href="#charities" class="btn btn-default">CHARITIES & NON-PROFIT GROUPS</a></li>
+                <li><a href="#green_initiatives"  class="btn btn-default">GREEN INITIATIVES</a></li>
+                <li><a href="#contract_policy" class="btn btn-default">BUILDING CONTRACT POLICY</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
