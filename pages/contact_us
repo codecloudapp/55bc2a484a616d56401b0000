@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+            <h1 class="visible-xs">Contact Us</h1>
+            <a name="directions"></a>
+            <h2>DIRECTeeeeIONS</h2>
+            Directions Content
+            
+            <a name="how_to_get_here"></a>
+            <h2>HOW TO GET HERE</h2>
+            How to get here
+            
+            <a name="parking_information"></a>
+            <h2>PARKING INFORMATION</h2>
+            Parking Information
+            
+            <a name="opening_hours"></a>
+            <h2>
+                OPENING HOURS
+                <small id="todays-hours">
+                    <script id="todays_hours_template" type="x-tmpl-mustache">
+                        Today: 
+                        <span style="{{is_open_css}};">
+                            {{open_time_localized}} - {{close_time_localized}}
+                        </span>
+                        <span style="{{is_closed_css}};">
+                            Closed
+                        </span>
+                    </script>
+                </small>
+            </h2>
+                <!-- START MUSTACHE TEMPLATE FOR REGULAR HOURS ITEM-->
+                <script id="regular_hours_template" type="x-tmpl-mustache">
+                        <span data-i18n="days_of_week.{{day_of_week}}"></span>
+                        <div class="pull-right" style="{{is_open_css}};">
+                            {{open_time_localized}} - {{close_time_localized}}
+                        </div>
+                        <div class="pull-right" style="{{is_closed_css}};">
+                            Closed
+                        </div>
+                </script>
+                <!-- END MUSTACHE TEMPLATE FOR HOURS ITEM-->    
+            <h4>Regular Hours</h4>
+            <ul class="list-group">
+                <li class="list-group-item" id="reg_hours_sun"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+                <li class="list-group-item" id="reg_hours_mon"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+                <li class="list-group-item" id="reg_hours_tue"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+                <li class="list-group-item" id="reg_hours_wed"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+                <li class="list-group-item" id="reg_hours_thu"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+                <li class="list-group-item" id="reg_hours_fri"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+                <li class="list-group-item" id="reg_hours_sat"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+            </ul>
+            <div id="hours_not_empty_section_id">
+                <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
+                <script id="holiday_hours_template" type="x-tmpl-mustache">
+                    <li class="list-group-item">
+                        {{holiday_name}}&nbsp;&nbsp;-&nbsp;&nbsp;{{holiday_date_localized}}
+                        <div class="pull-right" style="{{is_open_css}};">
+                            {{open_time_localized}} - {{close_time_localized}}
+                        </div>
+                        <div class="pull-right" style="{{is_closed_css}};">
+                            Closed
+                        </div>
+                    </li>
+                </script>
+                <!-- END MUSTACHE TEMPLATE FOR HOURS ITEM-->
+                <h4>Holiday Hours</h4>
+                <ul class="list-group" id="holiday-hours">
+                    <!--this content to be rendered by renderHolidayHours(..) -->
+                </ul>
+            </div>
+            <div id="hours_empty_section_id">
+                
+            </div>
+            <a name="administration_hours"></a>
+            <h2>ADMINISTRATION HOURS</h2>
+            Administration Hours
+            
+            <a name="accessibility"></a>
+            <h2>ACCESSIBILITY</h2>
+            Accessibility
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+            <h1 class="hidden-xs">Contact Us</h1>
+            <img src="http://placehold.it/350x350" class="hidden-xs">
+            <ul class="button-panel">
+                <li><a href="#directions" class="btn btn-default">DIRECTIONS</a></li>
+                <li><a href="#how_to_get_here" class="btn btn-default">HOW TO GET HERE</a></li>
+                <li><a href="#parking_information" class="btn btn-default">PARKINING INFORMATION</a></li>
+                <li><a href="#opening_hours" class="btn btn-default">OPENING HOURS</a></li>
+                <li><a href="#administration_hours" class="btn btn-default">ADMINISTRATION HOURS</a></li>
+                <li><a href="#accessibility" class="btn btn-default">ACCESSIBILITY</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    
+        
+    $(document).ready(function() {
+        
+        //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
+        renderRegularDayHours('#regular_hours_template','#reg_hours_sun',0);
+        renderRegularDayHours('#regular_hours_template','#reg_hours_mon',1);
+        renderRegularDayHours('#regular_hours_template','#reg_hours_tue',2);
+        renderRegularDayHours('#regular_hours_template','#reg_hours_wed',3);
+        renderRegularDayHours('#regular_hours_template','#reg_hours_thu',4);
+        renderRegularDayHours('#regular_hours_template','#reg_hours_fri',5);
+        renderRegularDayHours('#regular_hours_template','#reg_hours_sat',6);
+        renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),100);
+        renderTodaysHours('#todays_hours_template','#todays-hours');
+        
+    });
+</script>
+
