@@ -1,0 +1,37 @@
+<div class="container">hhghghghgghghg
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+            <h1 class="visible-xs">Customer Services</h1>
+            <a name="gift_cards"></a>
+            <h2>GIFT CARDS</h2>
+            Directions Content
+            
+            <a name="customer_services"></a>
+            <h2>CUSTOMER SERVICES</h2>
+            How to get here
+            
+            <a name="fitness_walking_club"></a>
+            <h2>FITNESS WALKING CLUB</h2>
+            Parking Information
+            
+            <a name="welcome_to_families"></a>
+            <h2>WELCOME TO FAMILIES</h2>
+            dsdsdsd
+            
+            <a name="wifi"></a>
+            <h2>Wifi</h2>
+            Opening Hours
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+            <h1 class="hidden-xs">Customer Services</h1>
+            <img src="http://placehold.it/350x350" class="hidden-xs">
+            <ul class="button-panel">
+                <li><a href="#gift_cards" class="btn btn-default">GIFT CARDS</a></li>
+                <li><a href="#customer_services" class="btn btn-default">CUSTOMER SERVICES</a></li>
+                <li><a href="#fitness_walking_club" class="btn btn-default">FITNESS WALKING CLUB</a></li>
+                <li><a href="#welcome_to_families" class="btn btn-default">WELCOME TO FAMILIES</a></li>
+                <li><a href="#wifi" class="btn btn-default">Wifi</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
