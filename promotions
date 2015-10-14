@@ -1,0 +1,100 @@
+<div class="container promotions">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <h1>Promotions</h1>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                              Stores
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                          <div class="panel-body list-group" id="stores_with_promotions">
+                            <script id="store_item_template" type="x-tmpl-mustache">
+                                <a class="list-group-item" href="#">
+                                    {{name}}
+                                    <span class="badge alert-success">
+                                    {{promotions.length}}
+                                    </span>
+                                </a>
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                              Categories
+                            </a>
+                          </h4>
+                        </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                  <div class="panel-body list-group" id="categories_with_promotions">
+                    <script id="category_item_template" type="x-tmpl-mustache">
+                        <a class="list-group-item" href="#">
+                            {{category_name}}
+                            <span class="badge alert-success">{{promotion_count}}</span>
+                        </a>
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>          
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            <div id="promotions_not_empty_section">
+                <ul class="promotion-list " id="promotion_list">
+                    <script id="promotion_item_template" type="x-tmpl-mustache">
+                        <li class="promotion-list-item row">
+                            <div class="promo-image col-md-2 col-xs-4">
+                                <a href="../promotions/{{ slug }}">
+                                    <img src="http://www.mallmaverick.com{{promo_image_url}}">
+                                </a>
+                            </div>
+                            <div class="promo-details col-md-10 col-xs-8">
+                                <div class="promo-name">
+                                    <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                                </div>
+                                <div class="promo-store-name">
+                                    <h4><a href="{{ promo_store_url }}">{{ promo_store_name }}</a></h4>
+                                </div>
+                                <div class="promo-dates">
+                                    {{ start_date }} to {{ end_date }}
+                                </div>
+                                <div class="promo-description">
+                                    {{ description }}
+                                </div>
+                            </div>
+                        </li>
+                    </script>
+                </ul>
+            </div>
+            <div id='promotions_empty_section'>
+                No Promotions at this time
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+        
+    $(document).ready(function() {
+        
+        //renders the promotion list by referencing the template id and the html id
+        //for where to place the rendered content. See mallmaverick.js for implementation
+        renderPromotionsListTemplate('#promotion_item_template','#promotion_list','#promotions_not_empty_section','#promotions_empty_section',getPromotionsList());
+        
+        //renders only the stores that have promtions. See mallmaverick.js for implementation
+        renderStoresWithPromotionsTemplate('#store_item_template','#stores_with_promotions');
+        
+        //renders only the categores that have promtions. See mallmaverick.js for implementation
+        renderCategoriesWithPromotionsTemplate('#category_item_template','#categories_with_promotions');
+        
+    });
+    
+</script>
