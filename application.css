@@ -89,16 +89,15 @@ footer .nav>li>a{
 
 .feature-item input{
     width:100%;
-    
 }
 
 .feature-bottom-border{
     padding-bottom:20px;
     margin-bottom:20px;
     border-bottom: 2px solid #585858;
-	border-top:0px;
-	border-left:0px;
-	border-right:0px;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
 }
 
 
@@ -126,11 +125,11 @@ footer .nav>li>a{
 .promotion-list .promotion-list-item{
     padding-top:10px;
     padding-bottom:10px;
-	border-style: solid;
-	border-bottom: 1px solid #F8F8F8;
-	border-top:0px;
-	border-left:0px;
-	border-right:0px;
+    border-style: solid;
+    border-bottom: 1px solid #F8F8F8;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
 }
 
 .promo-details h3{
@@ -228,6 +227,3 @@ footer .nav>li>a{
         padding-right:25px;
     }
 }
-
-
-
