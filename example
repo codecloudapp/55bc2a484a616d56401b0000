@@ -17,3 +17,19 @@
     
  
 </head>
+<body>
+    
+    <div class="message">
+        Message
+    </div>
+    <div class="success">
+        Message
+    </div>
+    <div class="warning">
+        Message
+    </div>
+    <div class="error">
+        Message
+    </div>
+    
+</body>
