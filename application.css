@@ -13,11 +13,10 @@ h3{
 
 
 a:hover {
-    text-decoration:none;
+
 }
 
 ul{
-    list-style-type: none;
     padding: 0px;
     margin: 0px;
 }
@@ -40,7 +39,6 @@ img{
 
 .navbar .navbar-nav {
     display: inline-block;
-    float: none;
     vertical-align: top;
 }
 
@@ -154,7 +152,6 @@ footer .nav>li>a{
 
 
 .footer-nav {
-    list-style-type: none;
     padding-left:0px;
     font-size:10px;
     word-break: break-all;
