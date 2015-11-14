@@ -39,17 +39,17 @@ img{
 }
 
 .navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
 }
 
 .navbar .navbar-collapse {
-  text-align: center;
+    text-align: center;
 }
 
 footer .navbar .navbar-collapse {
-  text-align: left;
+    text-align: left;
 }
 
 footer .nav>li>a{
