@@ -1,0 +1,56 @@
+<div class="container promotions">ddd
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <h1>Events</h1>
+            <div class="date"></div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            <div id="events_not_empty_section">
+                <ul class="promotion-list" id="events_list">
+                    <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM-->
+                    <script id="event_item_template" type="x-tmpl-mustache">
+                        <li class="promotion-list-item row">
+                            <div class="promo-image col-xs-5 col-sm-3 col-md-2">
+                                <a href="../promotions/{{ slug }}">
+                                    <img src="http://www.mallmaverick.com{{event_image_url}}">
+                                </a>
+                            </div>
+                            <div class="promo-details col-xs-7 col-sm-9 col-md-10">
+                                <div class="promo-name">
+                                    <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                                </div>
+                                <div class="promo-dates">
+                                    {{ start_date }} to {{ end_date }}
+                                </div>
+                                <div class="promo-description">
+                                    {{ description }}
+                                </div>
+                            </div>
+                        </li>
+                    </script>
+                    <!-- END MUSTACHE TEMPLATE FOR EVENT ITEM-->
+                </ul>  
+            </div>
+        </div>
+        <div id="events_empty_section">
+                No event information at this time, please check back again soon.
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        
+        //renders the events list by referencing the template id and the html id
+        //for where to place the rendered content. See mallmaverick.js for implementation
+        renderEventsListTemplate('#event_item_template','#events_list','#events_not_empty_section','#events_empty_section',getEventsList());
+        $('.date').datepicker(
+           {
+               format: 'mm/dd/yyyy',
+               startDate: '-3d',
+               todayHighlight:true
+            }
+        );
+    });
+    
+</script>
